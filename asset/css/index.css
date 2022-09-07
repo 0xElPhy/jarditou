@@ -65,7 +65,7 @@ section h2 {
 
     padding: 0 0 0 0.938rem;
     width: 40%;
-    height: 30.8rem;
+    height: 42rem;
 
     background-color: #cecece;
     Font-size: 1.4vmax;
@@ -73,7 +73,7 @@ section h2 {
 
 @media screen  and (max-width: 768px) {
     .colonne_droite {
-        visibility: unset;
+        display: none;
     }
     nav *, footer * {
         display: flex;
