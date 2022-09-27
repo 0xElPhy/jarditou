@@ -46,6 +46,11 @@ nav *, footer * {
     padding: 0.25rem 0 0 0;
 }
 
+.container {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
 section {
     display: flex;
     flex-direction: column;
@@ -60,15 +65,19 @@ section h2 {
 }
 
 .colonne_droite {
-    display: block;
-    float: right;
-
-    padding: 0 0 0 0.938rem;
+    padding-left: 0.5rem;
     width: 40%;
-    height: 42rem;
+    height: auto;
 
     background-color: #cecece;
     Font-size: 1.4vmax;
+}
+
+a:hover {
+    color: #ffd700;
+}
+a:active {
+    color: #00FFFF;
 }
 
 @media screen  and (max-width: 768px) {
@@ -84,11 +93,4 @@ section h2 {
     section{
         font-size: 10px;
     }
-}
-
-a:hover {
-    color: #ffd700;
-}
-a:active {
-    color: #00FFFF;
 }
