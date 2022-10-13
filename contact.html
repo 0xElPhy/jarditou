@@ -2,93 +2,234 @@
 <html lang="fr">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1 shrink-to-fit=no">
   <title>Jarditou</title>
-  <link rel="stylesheet" type="text/css" media="screen" href="./asset/css/index.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    
+    <!-- VERSION BOOTSTRAP -->
+
+
 </head>
-<body>
+<body class="container">
     <header>
-        <img class="logo" src="./asset/img/jarditou_logo.jpg" title="Jarditou" alt="logo" width="400">
-        <h1 class="slogan">Tout le jardin</h1>
+        <div class="row my-2">
+            <img class="logo col-4 my-auto" src="./assets/img/jarditou_logo.jpg" title="Jarditou" alt="logo_jarditou">
+            <h1 class="slogan col-8 my-auto h2 text-center">Tout le jardin</h1>
+        </div>
     </header>
 
-    <nav>
-        <ul>
-            <li><a href="index.html">Accueil</a></li>
-            <li><a href="tableau.html">Tableau</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
+    <nav class="navbar navbar-expand-lg bg-light navbar-light rounded">
+        <a class="navbar-brand mx-3" href="#">Jarditou.com</a>
+
+    <!-- Toggler/collapsible Button -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+        </button>   
+
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav text-center mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Accueil</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="tableau.html">Tableau</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="contact.html">Contact<span class="sr-only">(current)</span></a>
+                </li>
+            </ul>
+            <form class="form-inline">
+                <input class="form-control col-7 col-lg-auto mx-auto mr-lg-2" type="search" placeholder="Votre promotion" aria-label="Search">
+                <button class="btn btn-outline-success col-7 col-lg-auto mx-auto my-1 my-lg-0" type="submit">Recherche</button>
+            </form>
+        </div>
     </nav>
 
-    <section class="bandeau">
-        <img class="promo" src="./asset/img/promotion.jpg" title="Promotion" alt="promo">
-    </section>
-
-    <section class="container">
-        <aside class="colonne_droite">
-            <p>[COLONNE DROITE]</p>
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis perferendis dignissimos quaerat maxime iure, minus quia recusandae. Culpa accusamus sequi qui vel doloremque alias mollitia voluptatibus, excepturi ullam, minus numquam?
-            </p>
-        </aside>
-
-        <section class="formulaire">
-            <h2 id="contact">Contact</h2>
-            <form action="http://bienvu.net/script.php" method="post" id="formulaire_contact">
-                <p>* Ces zones sont obligatoires</p>
-                <fieldset>
-                    <legend>Coordonnées</legend>
-                    <label for="nom">Nom* : </label><input type="text" name="nom" id="nom" autofocus required>
-                        <br>
-                    <label for="prénom">Prénom* : </label><input type="text" name="prénom" id="prénom" required>
-                        <br>
-                        <br>
-                    <label for="sexe">Sexe* : </label>
-                        <input type="radio" name="sexe" value="Masculin" id="sexe" required> Masculin
-                        <input type="radio" name="sexe" value="Féminin"> Féminin
-                        <br>
-                        <br>
-                    <label for="date">Date de naissance* :</label><input type="date" name="ddn" id="date" required>
-                        <br>
-                    <label for="cp">Code postal* : </label><input type="number" name="cp" id="cp" required>
-                        <br>
-                    <label for="adresse">Adresse : </label><input type="text" name="adresse" id="adresse">
-                        <br>
-                    <label for="ville">Ville : </label><input type="text" name="ville" id="ville">
-                        <br>
-                    <label for="email">Email* : </label><input type="email" name="email" id="email" placeholder="david.lopez@afpa.fr">
-                        <br>
-                </fieldset>
-                    <br>
-                <fieldset>
-                    <legend>Votre demande</legend>
-                    <label for="sujet">Sujet* : </label>
-                        <select id="sujet" required> 
-                            <option value="">Veuillez sélectionner un sujet</option>
-                            <option value="Mes commandes">Mes commandes</option>
-                            <option value="Question sur un produit">Question sur un produit</option>
-                            <option value="Réclamation">Réclamation</option>
-                            <option value="Autres">Autres</option>
-                        </select>
-                    <br>
-                    <label for="question">Votre question* : </label><textarea name="question" id="question" rows="3" cols="25"></textarea>
-                </fieldset>
-                    <br>
-                <label for="accepte"></label> <input type="checkbox" name="accepte" id="accepte" required> * J'accepte le traitement informatique de ce formulaire
-                    <br>
-                    <br>
-                <button type="submit">Envoyer</button>
-                <button type="reset">Annuler</button>
-            </form>
+    <section class="row mt-2">
+        <section class="bandeau col-auto">
+            <img class="promo img-fluid rounded-top" src="./assets/img/promotion.jpg" title="Promotion" alt="promo">
         </section>
     </section>
 
-    <footer>
-        <ul>
-            <li><a href="#mentions">Mention légales</a></li>
-            <li><a href="#horaires">Horaires</a></li>
-            <li><a href="#plan_site">Plan du site</a></li>
-        </ul>
+<!-- Formulaire de Contact -->
+    <section class="row m-0 mb-4 p-3 pb-4 shadow rounded-bottom">
+        <section class="formulaire col-12">
+            <form action="" method="post" id="formulaire_contact">
+                <span>* Ces zones sont obligatoires</span>
+
+            <!-- Champs Coordinnées -->
+                <fieldset class="row my-4 py-2">
+                    <legend class="section_title h5">Vos Coordonnées :</legend>
+
+                <!-- Nom -->
+                    <section class="part nom form-group col-lg-6 col-12">
+                        <label class="label_f" for="nom">Nom* :</label>
+                        <div class="input-legend">
+                            <input class="saisie form-control" type="text" id="nom" autofocus >
+                            <legend class="legend_f nom h6 text-danger mt-1 ml-1" id="legende_nom" hidden></legend>
+                        </div>
+                    </section>
+                <!-- Nom -->
+
+                <!-- Prénom -->
+                    <section class="part prenom form-group col-lg-6 col-12">
+                    <label class="label_f" for="prénom">Prénom* :</label>
+                        <div class="input-legend">
+                            <input class="saisie form-control" id="prenom" type="text" name="prénom">
+                            <legend class="legend_f prenom h6 text-danger mt-1 ml-1" id="legende_prenom" hidden></legend>
+                        </div>
+                    </section>
+                <!-- Prénom -->
+                
+                <!-- Sexe -->
+                    <section class="part sexe form-group col-lg-6 col-12 mb-3">
+                        <label class="label_f form-check-label" for="sexe">Sexe* :</label>
+                            <div class="input-legend mt-2">
+                                <div class="form-check form-check-inline">
+                                    <input class="saisie radio form-check-input" id="masculin" name ="sexe" type="radio" value="Masculin">
+                                    <label class="label_f form-check-label mr-4" for="sexe1">Masculin</label>
+                                </div>
+
+                                <div class="form-check form-check-inline">
+                                    <input class="saisie radio form-check-input" id="feminin" name ="sexe" type="radio" value="Féminin">
+                                    <label class="label_f form-check-label" for="sexe2">Féminin</label>
+                                </div>
+
+                                <legend class="legend_f sexe h6 text-danger mt-1 ml-1" id="legende_sexe" hidden></legend>
+                            </div>
+                    </section>
+                <!-- Sexe -->
+
+                <!-- Date de naissance -->
+                    <section class="part date form-group col-lg-6 col-12">
+                        <label class="label_f" for="date">Date de naissance* :</label>
+                            <div class="input-legend">
+                                <input class="saisie form-control" id="date" type="text" placeholder="jj/mm/aaaa">
+                                <legend class="legend_f date h6 text-danger mt-1 ml-1" id="legende_date" hidden></legend>
+                            </div>
+                    </section>
+                <!-- Date de naissance -->
+                
+                <!-- Adresse -->
+                    <section class="part adresse form-group col-lg-4 col-12">                   
+                        <label class="label_f" for="adresse">Adresse :</label>
+                        <div class="input-legend">
+                            <input class="saisie form-control" id="adresse" type="text">
+                            <legend class="legend_f adresse h6 text-danger mt-1 ml-1" id="legende_adresse" hidden></legend>
+                        </div>
+                    </section>
+                <!-- Adresse -->
+
+                <!-- Code Postal -->
+                    <section class="part code_postal form-group col-lg-4 col-12 ">
+                        <label class="label_f" for="cp">Code postal* :</label>
+                        <div class="input-legend">
+                            <input class="saisie form-control" id="cp" type="text" name="cp" maxlength="5">
+                            <legend class="legend_f cp h6 text-danger mt-1 ml-1" id="legende_cp" hidden></legend>
+                        </div>
+                    </section>
+                <!-- Code Postal -->
+                
+                <!-- Ville -->
+                    <section class="part ville form-group col-lg-4 col-12">
+                        <label class="label_f" for="ville">Ville :</label>
+                        <div class="input-legend">
+                            <input class="saisie form-control" id="ville" type="text">
+                            <legend class="legend_f ville h6 text-danger mt-1 ml-1" id="legende_ville" hidden></legend>
+                        </div>
+                    </section>
+                <!-- Ville -->
+
+                <!-- Email -->
+                    <section class="part email form-group col-12">
+                        <label class="label_f" for="email">Email* :</label>
+                        <div class="input-legend">
+                            <input class="saisie form-control" id="email" type="text" placeholder="david.lopez@afpa.fr">
+                            <legend class="legend_f email h6 text-danger mt-1 ml-1" id="legende_email" hidden></legend>
+                        </div>
+                    </section>
+                <!-- Email -->
+    
+                </fieldset>
+            <!-- Champs Coordinnées -->
+
+            <!-- Champs Demande -->
+                <fieldset class="row mt-4 pt-2">
+                    <legend class="section_title h5">Votre demande :</legend>
+
+                <!-- Sujet -->
+                    <section class="part sujet form-group col-lg-5 col-12">
+                        <label class="label_f" for="sujet">Sujet* :</label>
+                        <div class="input-legend">
+                            <select class="selection form-control" id="sujet"> 
+                                <option value="">Veuillez sélectionner un sujet</option>
+                                <option value="Mes commandes">Mes commandes</option>
+                                <option value="Question sur un produit">Question sur un produit</option>
+                                <option value="Réclamation">Réclamation</option>
+                                <option value="Autres">Autres</option>
+                            </select>
+                            <legend class="legend_f h6 text-danger mt-1 ml-1" id="legende_sujet"></legend>
+                        </div>
+                    </section>
+                <!-- Sujet -->
+
+                <!-- Votre Question -->
+                    <section class="part question form-group col-lg-7 col-12">
+                        <label class="label_f" for="question">Votre question* :</label>
+                        <div class="input-legend">
+                            <textarea class="zonetxt form-control" id="question" rows="3" cols="25"></textarea>
+                            <legend class="legend_f h6 text-danger mt-1 ml-1" id="legende_question"></legend>
+                        </div>
+                    </section>
+                <!-- Votre Question -->
+
+                </fieldset>
+            <!-- Champs Demande -->
+
+            <!-- Checkbox validation formulaire -->
+                <section class="part traitement form-check row mb-4">
+                    <input class="saisie checkbox form-check-input" type="checkbox" id="accepte" value="accepté" required>
+                    <div class="input-legend">
+                        <label class="accepte form-check-label" for="accepte">J'accepte le traitement informatique de ce formulaire</label>
+                        <legend class="legend_f h6 text-danger mt-1 ml-1" id="legende_accepte"></legend>
+                    </div>
+                </section>
+            <!-- Checkbox validation formulaire -->
+
+            <!-- Boutons Envoyer / Annuler -->
+                <section class="boutons ml-lg-3 pl-lg-1">
+                    <button class="btn btn-outline-success bg-dark col-12 col-lg-auto px-5 py-2 mr-lg-4" id="envoie" type="button">Envoyer</button>
+                    <button class="btn btn-outline-warning bg-dark col-12 col-lg-auto px-5 py-2 my-2 my-lg-0" id="annule" role="button" type="reset">Annuler</button>
+                </section>
+            <!-- Boutons Envoyer / Annuler -->
+
+            </form>
+        </section>
+    </section>
+<!-- Formulaire de Contact -->
+
+    <footer class="rounded-top text-center bg-dark" style="background-color: #f1f1f1;">
+        <!-- Grid container -->
+        <div class="container pt-2">
+          <section class="mb-2">
+            <a class="btn btn-link btn-floating btn-lg text-light m-1" href="#mention légales">Mentions légales</a>
+      
+            <a class="btn btn-link btn-floating btn-lg text-light m-1" href="#horaires">Horaires</a>
+      
+            <a class="btn btn-link btn-floating btn-lg text-light m-1" href="#plan">Plan du site</a>
+          </section>
+        </div>
+        <!-- Copyright -->
+        <div class="text-center text-light p-2">
+          © Octobre 2022 - Valentin Martel - AFPA Amiens :
+          <a class="text-light" href="#">jarditou.com</a>
+        </div>
     </footer>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="./assets/javascript/contact.js"></script>
 </body>
 </html>
